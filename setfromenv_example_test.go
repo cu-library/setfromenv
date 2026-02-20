@@ -63,8 +63,8 @@ func ExampleSetFlagsInFlagSet() {
 
 	// Set the value of unset flags from the environment.
 	// Normally, you would use SetFlags(prefix),
-	// which but for this
-	// example we need to pass the explicit FlagSet fs.
+	// which sets the unset flags from the parsed command line.
+	// In this example, we need to pass the explicit FlagSet fs.
 	err := setfromenv.SetFlagsInFlagSet(fs, prefix)
 	if err != nil {
 		fmt.Printf("error: %v", err)
