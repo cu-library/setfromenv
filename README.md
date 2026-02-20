@@ -75,12 +75,21 @@ Then, from the command line, assuming the resulting `scanner` program is in the 
 ```bash
 $ ./scanner
 Power level: 0
+$ ./scanner -h
+Scanner: Vegeta, what does the scanner say about his power level?
+Version devel
+Compiled with go1.25.7
+  -power-level int
+        power level
+
+Environment variables read when flag is unset:
+power-level: SCANNER_POWER_LEVEL
 $ export SCANNER_POWER_LEVEL=1000
 $ ./scanner
 Power level: 1000
 $ ./scanner -power-level 9001
 Power level: 9001
-It's over nine thousand!
+It\'s over nine thousand!
 $ export SCANNER_POWER_LEVEL="One hundred puppies."
 $ ./scanner
 unable to set flag "power-level" from environment variable "SCANNER_POWER_LEVEL": parse error
