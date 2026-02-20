@@ -72,7 +72,7 @@ func main() {
 
 Then, from the command line, assuming the resulting `scanner` program is in the local directory and executable:
 
-```bash
+```
 $ ./scanner
 Power level: 0
 $ ./scanner -h
@@ -89,7 +89,7 @@ $ ./scanner
 Power level: 1000
 $ ./scanner -power-level 9001
 Power level: 9001
-It\'s over nine thousand!
+It's over nine thousand!
 $ export SCANNER_POWER_LEVEL="One hundred puppies."
 $ ./scanner
 unable to set flag "power-level" from environment variable "SCANNER_POWER_LEVEL": parse error
