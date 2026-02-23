@@ -110,8 +110,8 @@ func TestSetFlagsInFlagSetUnsetFlags(t *testing.T) {
 
 func TestSetFlagsInFlagSetUnsetFlagsNormalizeKey(t *testing.T) {
 
-	prefix_without_underscore := "OVERRIDEFROMENVTEST"
-	prefix := prefix_without_underscore + "_"
+	prefixWithoutUnderscore := "OVERRIDEFROMENVTEST"
+	prefix := prefixWithoutUnderscore + "_"
 
 	fs := flag.NewFlagSet("test", flag.ExitOnError)
 
@@ -141,7 +141,7 @@ func TestSetFlagsInFlagSetUnsetFlagsNormalizeKey(t *testing.T) {
 	u64 := fs.Uint64("uint_64-test", 1, "")
 	t.Setenv(prefix+"UINT_64_TEST", "2")
 
-	_ = SetFlagsInFlagSet(fs, prefix_without_underscore)
+	_ = SetFlagsInFlagSet(fs, prefixWithoutUnderscore)
 
 	if *b != false {
 		t.Error("bool flag was not overwritten.")
